@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<!-- Andres Martinez Project 4 , for visual frame works -->
+
+<html lang="">
+    <head>
+        <meta charset="utf-8">
+        <title>Andres Martinez App</title>
+        <meta name="description" content="">
+        <meta name="keywords" content="">
+        <meta name="robots" content="index, follow">
+        <link rel="stylesheet" href="css/styles.css">
+    </head>
+    <body>
+        <div id="main" data-theme="b">
+        <form name="myform" action="#">
+            <h1>A &amp; M Ultimate WorkOut:</h1>
+            <fieldset>
+                <legend>What will you workout?:</legend>
+            <ul>
+                <li><label for="pworkout">Pick A Workout:</label>
+                    <select id="pworkout">
+                    <optgroup label="Chest">
+                        <option value="Benchpress">Benchpress</option>
+                        <option value="Pushups">Pushups</option>
+                        <option value="Incline">Incline</option>
+                    </optgroup>
+                    <optgroup label="Abb's">
+                        <option value="Situps">Situps</option>
+                        <option value="Sidebends">Sidebends</option>
+                        <option value="Legraise">Legraise</option>
+                    </optgroup>
+                    <optgroup label="Leg's">
+                        <option value="Squats">Squats</option>
+                        <option value="Legpress">Legpress</option>
+                        <option value="Calfraise">Calfraise</option>
+                    </optgroup>
+                    </select>
+                </li>
+            </ul>
+            </fieldset>
+            <fieldset>
+                <legend>More Workout Info:</legend>
+
+                <ul>
+                    <li><label for="name">Name:</label>
+                        <input type="text" id="name"></li>
+                </ul>
+                <ul>
+                    <li>Is this your favorite workout?
+                    <ul>
+                        <li><label for="yes">Yes</label>
+                            <input type="checkbox" id="yes">
+                        </li>
+                    </ul>
+                    </li>
+                </ul><label>How many reps are you doing?</label>
+                    <input type="range" min="0" max="10" step="2" value="" id="reps">
+                <ul>
+                    <li><label for="wkdate">Workout Date:</label>
+                        <input type="text" id="wkdate" placeholder="08-20-11">
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <label for="comments">Comments: </label>
+                        <textarea id="comments"></textarea>
+                    </li>
+                </ul>
+            </fieldset>
+        
+        <input type="submit" value="submit" onclick="storeItems();">
+        </div>
+        
+        <div id="clear">
+            <fieldset id="list">
+                <h1> Here Are Your Result's!!!</h1>
+                <p id="chest"><img src="img/chest.png"></p>
+                <p id="abs"><img src="img/abs.png"></p>
+                <p id="legs"><img src="img/legs.png"></p>
+            </fieldset>
+            <p class="reg">
+                <a href="#" onclick="clearLocal(); location.reload();">clear local storage</a>
+                <a href="#" onclick="editItem(); ">Edit Item</a>
+                <a href="#" onclick="deleteItems(); ">Delete item</a>
+
+            </p>
+        </div>
+        </form>
+        
+        <script src="js/main.js"></script>
+    </body>
+</html>
